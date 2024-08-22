@@ -14,4 +14,6 @@ console.log("doe")
 console.log("done")
 console.log("doe")
 
+let Valueofthis = 56;
+
 
