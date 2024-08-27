@@ -1,17 +1,36 @@
 app.post(
       url + "/surprise/list",
       Validation.SurprisePackageApiValidation,
-      (req: Request, res: Response) => {
+      (req, res) => {
         this.serviceCtrl.getAllSurprisePackage(req, res);
       }
     );
 
 console.log("Change is made now for checking");
-console.log("Changes happened lastime");
 
 app.get(
-      url + "/reference",
-      (req: Request, res: Response) => {
-        this.serviceCtrl.getReference(req, res);
+    url + "/matri/:id",
+    JwtToken.verify,
+    (req,res) => {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return badResponse(errors.array(), res);
       }
-    );
+      this.serviceCtrl.getMatriById(req, res);
+    }
+  );
+
+console.log("Changes happened lastime");
+
+app.put(
+    url + "/matri/:id",
+    JwtToken.verify,
+    (req,res) => {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return badResponse(errors.array(), res);
+      }
+      this.serviceCtrl.deleteMatriPost(req, res);
+    }
+  );
+
