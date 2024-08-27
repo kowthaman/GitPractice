@@ -6,3 +6,9 @@ app.post(
       }
     );
 
+    app.post(
+        url + "/list",
+        (req, res) => {
+          this.serviceCtrl.getAllMatri(req, res);
+        }
+      );
