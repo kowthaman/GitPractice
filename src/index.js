@@ -10,6 +10,3 @@ console.log("Just Checking now for check!!!")
 console.log("Just kidding!!!")
 
 
-const myFunction = async () => {
-    console.log("This is my function");
-}
