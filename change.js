@@ -1,3 +1,11 @@
+app.post(
+      url + "/surprise/list",
+      Validation.SurprisePackageApiValidation,
+      (req, res) => {
+        this.serviceCtrl.getAllSurprisePackage(req, res);
+      }
+    );
+
 console.log("Change is made now for checking");
 
 app.get(
@@ -25,3 +33,4 @@ app.put(
       this.serviceCtrl.deleteMatriPost(req, res);
     }
   );
+
