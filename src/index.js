@@ -8,5 +8,7 @@ const function_ = async () => {
 console.log("Just Checking ok!!!")
 console.log("Just Checking now for check!!!")
 console.log("Just kidding!!!")
-
+const other = async () => {
+  console.log("other")
+}
 
