@@ -7,4 +7,7 @@ console.log("Just kidding!!!")
 const other = async () => {
   console.log("other")
 }
+const check_2 = async () => {
+  console.log("for only checking");
+}
 
